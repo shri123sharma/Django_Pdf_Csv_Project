@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Title</title>
+        <style type="text/css">
+          table {  
+            font-family: arial, sans-serif;  
+            border-collapse: collapse;  
+            width: 100%;  
+        }  
+  
+        td, th {  
+            border: 1px solid #dddddd;  
+            text-align: left;  
+            padding: 8px;  
+        }  
+  
+        tr:nth-child(even) {  
+            background-color: #dddddd;  
+        } 
+        form > h2{
+           color: #0094ff;
+        } 
+        form > p:first-child{
+            font-size: large;
+        }
+        .createPDF{
+            font-size: 14px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <h1>Address_Detail_Pdf</h1>
+            </div>
+        <div>
+          <table>  
+            <tbody>  
+              <tr>  
+                <th>Title</th>  
+                <th>Description</th>  
+                <th>Length</th> 
+                <th>Rental_Duration</th> 
+                <th>Created_Date</th>
+                <th>Last_Date</th>
+              </tr>  
+              {% for add_data in address_data %}
+                <tr>  
+                    <td>{{add_data.title}}</td>
+                    <td>{{add_data.description}}</td>
+                    <td>{{add_data.length}}</td>
+                    <td>{{add_data.rental_duration}}</td>
+                    <td>{{add_data.created_date}}</td> 
+                    <td>{{add_data.last_update}}</td>        
+                  </tr>  
+              {% endfor %} 
+              </tbody> 
+            </table> 
+    </div>
+    </body>
+</html>
