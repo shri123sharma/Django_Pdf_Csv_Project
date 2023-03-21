@@ -39,9 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Csv_Task_1',
     'Pdf_task_2',
-    'view_task_3',
-    'drf_task',
-    'hotel_management',
     'rest_framework',
 ]
 
